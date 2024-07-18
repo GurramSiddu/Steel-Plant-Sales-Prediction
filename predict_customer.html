@@ -1,0 +1,61 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDICT CUSTOMER</title>
+    <style>
+        body {
+            background-image: url('https://i.ibb.co/9HZm15D/img2.jpg');
+            background-size: cover;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            background: rgba(248, 248, 248, 0.255);
+            padding: 20px;
+            margin: 50px;
+            margin-left: 30%;
+            margin-right: 30%;
+            border-radius: 10px;
+        }
+        .button {
+            background-color: #5941f6;
+            border: none;
+            color: rgb(252, 250, 250);
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+    <h1>PREDICT CUSTOMER</h1>
+    <form action="/predict_customer" method="post">
+        <label for="customer_code">Customer Code:</label>
+        <input type="text" id="customer_code" name="customer_code"><br><br>
+
+        <label for="start_year"> Year:</label>
+        <input type="text" id="start_year" name="start_year"><br><br>
+
+        <label for="months">Months to Predict:</label>
+        <input type="text" id="months" name="months"><br><br>
+
+        <button type="submit" class="button">Submit</button>
+    </div>
+    </form>
+</body>
+</html>

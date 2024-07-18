@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Prediction Results</h1>
+
+    <div class="content">
+        <h2>Sales Forecast</h2>
+        <img src="{{ url_for('plot_file', filename=sales_plot.split('/')[-1]) }}" alt="Sales Forecast Plot">
+
+        <h2>Quantity Forecast</h2>
+        <img src="{{ url_for('plot_file', filename=qty_plot.split('/')[-1]) }}" alt="Quantity Forecast Plot">
+
+        <br><br>
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>
